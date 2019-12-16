@@ -3,7 +3,7 @@
 <title>This is google yes</title>
 
 <?php
-header('location: https://google.com');
+//header('location: https://google.com');
 $ipadd = htmlspecialchars($_SERVER['REMOTE_ADDR']);
 $search = htmlspecialchars($_GET['q']);
 
