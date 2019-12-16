@@ -21,6 +21,12 @@ $dbn = "g00gie";
     $sql = "SELECT ipaddr, search from victims;";
     $sql_ins = "INSERT INTO victims (ipaddr,search) 
         values ('{$ipadd}','{$search}')";
+    //error test
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 
 mysqli_close($conn);
 ?>
