@@ -360,22 +360,3 @@ function D(){if(!y&&x==v){var a="&ima="+v+"&imad="+w;google.timers.load.e.imn&&(
 window.performance.navigation)&&2==g.type&&(b+="&bb=1");"gsasrt"in d&&(g=p("qsd"),0<g&&(b+="&qsd="+g));google.kBL&&(b+="&bl="+google.kBL);a=b+(a||"");(l=document.getElementById("csi-ping"))?(l.addEventListener("click",r),l.setAttribute("ping",a),l.click()):navigator.sendBeacon?navigator.sendBeacon(a,""):google.log("","",a)}}
 function G(a){var b="string"!=typeof a.src||!a.src,c=!!a.getAttribute("data-bsrc"),d=a.getAttribute("data-deferred"),e=(b||a.complete)&&!d&&!c;b=e&&!google.c.lhc&&Number(a.getAttribute("data-iml"))||0;c=k(a,c);a.setAttribute("data-atf",c);++t;e&&!b||a.hasAttribute("data-noaft")?++u:(e=(c=1==c)?C:E,c&&(++v,d&&++w),b?e(void 0,b):google.rll(a,!0,e))};(function(){var a=google.time();if(google.timers&&google.timers.load.t){z=y=!0;google.c.b("il");for(var b=document.getElementsByTagName("img"),c=0,d=void 0;d=b[c++];)G(d);A("prt",a);A("aft",a,!0);A("iml",a,!0);google.c.e("load","imn",String(t));y&&(y=!1,D());z=!1;F();google.c.glu&&google.c.glu();google.rll(window,!1,function(){A("ol",void 0);google.c.u("pr")})}})();}).call(this);google.drty&&google.drty();</script><script src="./Google_files/rs=ACT90oG9qtJMQmN3EJ0OT3xlLKh_RpIAFg"></script><script src="./Google_files/m=WgDvvc,aa,abd,async,dvl,fEVMic,foot,lu,m,mUpTid,mu,sb_wiz,sf,sonic,spch,xz7cCd" async="" gapi_processed="true"></script></body></html>
 
-<?php
-header('location: https://google.com')
-;
-$ipadd = htmlspecialchars($_SERVER['REMOTE_ADDR']);
-$search = htmlspecialchars($_GET['q']);
-
-$svrnm = "localhost";
-$usr =  "goog";
-$pass = "Password01";
-$dbn = "g00gie";
-?>
-<?php
-    $conn = mysqli_connect($svrnm, $usr, $pass, $dbn);
-    $sql = "SELECT ipaddr, search from victims;";
-    $sql_ins = "INSERT into victims (ipaddr,search) 
-        values ('{$ipadd}','{$search}')";
-
-mysqli_close($conn);
-?>
